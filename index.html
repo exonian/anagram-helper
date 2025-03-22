@@ -6,20 +6,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     >
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <main class="container">
       <h1>Anagram helper</h1>
       <main>
-        <div><label for="source">Starting letters</label><input id="source" /></div>
-        <div><label for="solution">New words</label><input id="solution" /></div>
+        <div><label for="source">Available letters</label><input id="source" /></div>
+        <div><label for="solution">Answer</label><input id="solution" /></div>
         <div>
           <h2>Remaining letters</h2>
-          <p id="remaining"></p>
+          <p id="remaining" class="tiles"></p>
         </div>
         <div>
-          <h2>Bad letters</h2>
-          <p id="errors"></p>
+          <h2>Illegal letters</h2>
+          <p id="errors" class="tiles"></p>
         </div>
       </main>
       <script src="index.js"></script>

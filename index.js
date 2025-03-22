@@ -5,12 +5,14 @@ function setRemaining() {
   var remaining = solution.reduce((running, current) => {
     return running.replace(current, '')
   }, [...source].join(''))
-  document.getElementById("remaining").innerText = remaining
+  var remainingSpans = remaining.split('').map(x => '<span>' + x + '</span>').join('')
+  document.getElementById("remaining").innerHTML = remainingSpans
 
   var errors = source.reduce((running, current) => {
     return running.replace(current, '')
   }, [...solution].join(''))
-  document.getElementById("errors").innerText = errors
+  var errorsSpans = errors.split('').map(x => '<span>' + x + '</span>').join('')
+  document.getElementById("errors").innerHTML = errorsSpans
 };
 
 document.getElementById("source")?.addEventListener("input", e => setRemaining())
