@@ -1,6 +1,6 @@
 function setRemaining() {
-  var source = document.getElementById("source").value.replaceAll(' ', '').split('')
-  var solution = document.getElementById("solution").value.replaceAll(' ', '').split('')
+  var source = document.getElementById("source").value.toUpperCase().replaceAll(' ', '').split('')
+  var solution = document.getElementById("solution").value.toUpperCase().replaceAll(' ', '').split('')
 
   var remaining = solution.reduce((running, current) => {
     return running.replace(current, '')
