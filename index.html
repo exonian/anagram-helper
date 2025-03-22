@@ -2,21 +2,27 @@
 <html>
   <head>
     <title>Anagram helper</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
   </head>
   <body>
-    <h1>Anagram helper</h1>
-    <main>
-      <div><label for="source">Starting letters</label><input id="source" /></div>
-      <div><label for="solution">New words</label><input id="solution" /></div>
-      <div>
-        <h2>Remaining letters</h2>
-        <p id="remaining"></p>
-      </div>
-      <div>
-        <h2>Bad letters</h2>
-        <p id="errors"></p>
-      </div>
+    <main class="container">
+      <h1>Anagram helper</h1>
+      <main>
+        <div><label for="source">Starting letters</label><input id="source" /></div>
+        <div><label for="solution">New words</label><input id="solution" /></div>
+        <div>
+          <h2>Remaining letters</h2>
+          <p id="remaining"></p>
+        </div>
+        <div>
+          <h2>Bad letters</h2>
+          <p id="errors"></p>
+        </div>
+      </main>
+      <script src="index.js"></script>
     </main>
-    <script src="index.js"></script>
   </body>
 </html>
