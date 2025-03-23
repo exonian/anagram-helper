@@ -48,3 +48,5 @@ function sourceRandom() {
 
 document.getElementById("source")?.addEventListener("input", e => setRemaining())
 document.getElementById("solution")?.addEventListener("input", e => setRemaining())
+
+setRemaining()
