@@ -24,5 +24,27 @@ function setRemaining() {
   else errorsDiv.style.display = 'block'
 };
 
+function sourceAtoZ() {
+  var sourceElement = document.getElementById("source")
+  sourceElement.value = sourceElement.value.split('').sort().join('')
+  setRemaining()
+}
+
+// shuffle array from https://stackoverflow.com/a/34377908
+Array.prototype.shuffle = function() {
+  let m = this.length, i;
+  while (m) {
+    i = (Math.random() * m--) >>> 0;
+    [this[m], this[i]] = [this[i], this[m]]
+  }
+  return this;
+}
+
+function sourceRandom() {
+  var sourceElement = document.getElementById("source")
+  sourceElement.value = sourceElement.value.split('').shuffle().join('')
+  setRemaining()
+}
+
 document.getElementById("source")?.addEventListener("input", e => setRemaining())
 document.getElementById("solution")?.addEventListener("input", e => setRemaining())

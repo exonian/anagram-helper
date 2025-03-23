@@ -13,6 +13,10 @@
       <h1>Anagram helper</h1>
       <main>
         <div><label for="source">Available letters</label><input id="source" /></div>
+        <div role="group">
+          <button class="outline secondary" onclick="sourceAtoZ()">Put in alphabetical order</button>
+          <button class="outline secondary" onclick="sourceRandom()">Randomise order</button>
+        </div>
         <div><label for="solution">Answer</label><input id="solution" /></div>
         <div id="remainingDiv">
           <h2>Remaining letters</h2>
